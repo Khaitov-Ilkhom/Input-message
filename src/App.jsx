@@ -9,7 +9,6 @@ const onFinish = async (values) => {
   }
   try {
     const res = await axios.post("/bot7410941395:AAFQuB74iyNF-i8UwgzoGbYcAvFHhtxQUDM/sendMessage", obj)
-    form.resetFields();
   } catch (error) {
     console.log(error)
   }
@@ -20,13 +19,11 @@ const onFinishFailed = (errorInfo) => {
 
 function App() {
 
-  const [form] = Form.useForm()
   return (
     <>
 
       <div className="w-full h-screen bg-blue-500 flex justify-center items-center">
         <Form
-          form={form}
           name="basic"
           labelCol={{
             span: 8,
