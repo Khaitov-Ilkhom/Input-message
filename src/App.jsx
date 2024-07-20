@@ -20,11 +20,13 @@ const onFinishFailed = (errorInfo) => {
 
 function App() {
 
+  const [form] = Form.useForm()
   return (
     <>
 
       <div className="w-full h-screen bg-blue-500 flex justify-center items-center">
         <Form
+          form={form}
           name="basic"
           labelCol={{
             span: 8,
