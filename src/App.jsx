@@ -7,9 +7,9 @@ const onFinish = async (values) => {
     ...values,
     chat_id: 1196343136
   }
-  console.log('Success:', values);
   try {
     const res = await axios.post("/bot7410941395:AAFQuB74iyNF-i8UwgzoGbYcAvFHhtxQUDM/sendMessage", obj)
+    form.resetFields();
   } catch (error) {
     console.log(error)
   }
